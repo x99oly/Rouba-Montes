@@ -25,6 +25,11 @@ namespace RoubaMontes.Domain
             InstancirBaralho(totalDeJogadores * _quantidadeDeCartasPorJogador);
         }
 
+        public void DistribuirCartas(Jogador[] jogadores, Monte[] montes)
+        {
+
+        }
+
         /// <summary>
         /// Preenche a Queue de cartas aleatóriamente
         /// </summary>
