@@ -1,0 +1,13 @@
+# Excluir a pasta de configurações do Visual Studio
+.vs/
+
+# Excluir binários e arquivos de compilação
+bin/
+obj/
+
+# Excluir arquivos gerados pelo sistema
+*.user
+*.suo
+*.log
+*.tmp
+*.vscode/
