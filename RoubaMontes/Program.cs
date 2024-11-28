@@ -1,2 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿//Copas(Coração): ♥ (\u2665)
+//Ouros(Diamante): ♦ (\u2666)
+//Espadas: ♠ (\u2660)
+//Paus(Trevo): ♣ (\u2663)

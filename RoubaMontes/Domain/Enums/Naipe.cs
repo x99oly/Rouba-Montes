@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace RoubaMontes.Domain.Enums
 {
-    internal class Class1
+    public enum Naipe
     {
+        Copas = '♥',
+        Ouros = '♦',
+        Espadas = '♠',
+        Paus = '♣'
     }
+
 }
