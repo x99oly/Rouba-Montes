@@ -18,8 +18,8 @@
         public void ComprarCarta(Carta carta)
         {
             TestarAutoNulidade();
-
             if (carta == null) throw new ArgumentNullException($"Carta não pode ser nula");
+
             Monte.Enqueue(carta);
         }
 
@@ -27,5 +27,6 @@
         {
             if (string.IsNullOrEmpty(Nome)) throw new ArgumentNullException("Jogador instânciado, mas não iniciado: ");
         }
+        
     }
 }
