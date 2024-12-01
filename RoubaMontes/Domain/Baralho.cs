@@ -19,7 +19,7 @@ namespace RoubaMontes.Domain
 
         private Random _cartaEscolhida;
 
-        public int UltimaCarta { get; private set; }
+        public int posicaoDaUltimaCarta { get; private set; }
 
 
         /// <summary>
@@ -42,18 +42,23 @@ namespace RoubaMontes.Domain
             if (totalDeCartas < 52) totalDeCartas = 52;
 
             Cartas = new Carta[totalDeCartas];
-            UltimaCarta = Cartas.Length - 1;
+            posicaoDaUltimaCarta = Cartas.Length - 1;
 
             InstancirBaralho(totalDeCartas);
             Embaralhar();
         }
 
+        /// <summary>
+        /// Retira lógicamente o último índice do baralho e entrega ao jogador.
+        /// </summary>
+        /// <param name="jogadorDaVez">Jogador que tem a vez na rodada</param>
+        /// <exception cref="ArgumentOutOfRangeException">Em caso de não haver mais cartas no baralho</exception>
         public void RetirarCarta(Jogador jogadorDaVez)
         {
-            if (UltimaCarta == 0) throw new ArgumentOutOfRangeException("Não há mais cartas para serem compradas no baralho.");
+            if (posicaoDaUltimaCarta == 0) throw new ArgumentOutOfRangeException("Não há mais cartas para serem compradas no baralho.");
 
-            jogadorDaVez.ComprarCarta(Cartas[UltimaCarta]);
-            UltimaCarta--;
+            jogadorDaVez.ComprarCarta(Cartas[posicaoDaUltimaCarta]);
+            posicaoDaUltimaCarta--;
         }
 
         private void InstancirBaralho(int totalDeCartas)
