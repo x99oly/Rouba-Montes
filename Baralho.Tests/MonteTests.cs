@@ -51,8 +51,6 @@ namespace RoubaMontes.Tests
 
             // Assert
             Assert.Equal(2, totalEsperado);
-            Assert.Single(monte1.MonteDeMonteDeCartas);
-            Assert.Contains(monte2, monte1.MonteDeMonteDeCartas);
         }
 
         [Fact]
@@ -86,6 +84,52 @@ namespace RoubaMontes.Tests
             Assert.Contains("Total de cartas: 1", resultado);
             Assert.Contains("Última carta: 1♥", resultado);
         }
+
+        [Fact]
+        public void Monte_AdicionarCarta_CalculaTotalDeCartasCorretamente()
+        {
+            // Arrange
+            Monte monte = new Monte(new Carta(1, '♥'));
+            Carta novaCarta = new Carta(2, '♦');
+
+            // Act
+            monte.AdicionarCarta(novaCarta);
+
+            // Assert
+            Assert.Equal(2, monte.TotalDeCartas);
+            Assert.Contains(novaCarta, monte.MonteDeCartas);
+        }
+
+        [Fact]
+        public void Monte_CalcularTotalDeCartas_RetornaZero_QuandoMonteDeCartasForNulo()
+        {
+            // Arrange
+            Monte monte = new Monte(new Carta(1, '♥'));
+            monte.MonteDeCartas.Clear(); // Simula um MonteDeCartas nulo
+
+            // Act
+            monte.CalcularTotalDeCartas();
+
+            // Assert
+            Assert.Equal(0, monte.TotalDeCartas);
+        }
+
+        [Fact]
+        public void Monte_AdicionarMonte_CalculaTotalDeCartasCorretamente()
+        {
+            // Arrange
+            Monte monte1 = new Monte(new Carta(1, '♥'));
+            Monte monte2 = new Monte(new Carta(2, '♦'));
+            monte1.AdicionarCarta(new Carta(3, '♠'));
+            monte2.AdicionarCarta(new Carta(4, '♣'));
+
+            // Act
+            monte1.AdicionarMonte(monte2);
+
+            // Assert
+            Assert.Equal(4, monte1.TotalDeCartas);
+        }
+
 
     }
 }

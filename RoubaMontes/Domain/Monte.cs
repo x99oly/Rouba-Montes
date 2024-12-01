@@ -4,8 +4,6 @@
     {
         public Stack<Carta> MonteDeCartas { get; private set; }
 
-        public Stack<Monte> MonteDeMonteDeCartas { get; private set; }
-
         public Jogador? JogadorDono { get; private set; }
 
         public int TotalDeCartas { get; private set; }
@@ -14,7 +12,6 @@
             TotalDeCartas = 0;
 
             MonteDeCartas = new Stack<Carta>();
-            MonteDeMonteDeCartas = new Stack<Monte>();
             
             AdicionarCarta(carta);
         }
@@ -27,21 +24,31 @@
         public void AdicionarCarta(Carta carta)
         {
             MonteDeCartas.Push(carta);
-            TotalDeCartas++;
+            CalcularTotalDeCartas();
+        }
+
+        public void CalcularTotalDeCartas()
+        {
+            if (MonteDeCartas == null) TotalDeCartas = 0;
+
+            TotalDeCartas = MonteDeCartas.Count();
         }
 
         public void AdicionarMonte(Monte monte)
         {
-            MonteDeMonteDeCartas.Push(monte);
+            while(monte.MonteDeCartas.Count > 0)
+            {
+                MonteDeCartas.Push(monte.MonteDeCartas.Pop());
+            }
             TotalDeCartas += monte.TotalDeCartas;
         }
 
         public Carta UltimaCarta()
         {
-            if (MonteDeMonteDeCartas.Count == 0)
-                return MonteDeCartas.Peek();
+            if (MonteDeCartas == null || MonteDeCartas.Count == 0)
+                throw new ArgumentNullException("Não há mais cartas no monte do jogador.");
 
-            return MonteDeMonteDeCartas.Peek().MonteDeCartas.Peek();
+            return MonteDeCartas.Peek();
         }
 
         public override string ToString()

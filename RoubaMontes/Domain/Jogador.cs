@@ -3,32 +3,38 @@
     public class Jogador
     {
         public string Nome { get; private set; }
-        public Queue<Carta> Monte { get; private set; }
+        public Stack<Carta> MonteDeCartas { get; private set; }
         public int PosicaoNaUltimaPartida { get; private set; }
         public int TamanhoDoMonteNaUltimaPartida { get; private set; }
-
-        public Jogador() {
-            Monte = new Queue<Carta>();
-        }
 
         public Jogador(string nome)
         {
             Nome = nome;
-            Monte = new Queue<Carta>();
+            MonteDeCartas = new Stack<Carta>();
         }
 
         public void ComprarCarta(Carta carta)
         {
-            TestarAutoNulidade();
-            if (carta == null) throw new ArgumentNullException($"Carta não pode ser nula");
-
-            Monte.Enqueue(carta);
+            MonteDeCartas.Push(carta);
         }
 
-        private void TestarAutoNulidade()
+        public void SelecionarMonte(Dictionary<Carta,Monte> montes, Carta carta)
         {
-            if (string.IsNullOrEmpty(Nome)) throw new ArgumentNullException("Jogador instânciado, mas não iniciado: ");
+            if (montes.TryGetValue(carta, out Monte? novoMonte))
+            {
+                novoMonte.VincularJogador(this);
+                while(novoMonte.MonteDeCartas.Count > 0)
+                {
+                    MonteDeCartas.Push(novoMonte.MonteDeCartas.Pop());
+                }
+            }
         }
+
+        public void PassarVez()
+        {
+            throw new NotImplementedException();
+        }
+
         
     }
 }

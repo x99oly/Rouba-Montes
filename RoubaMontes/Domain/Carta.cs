@@ -7,8 +7,6 @@ namespace RoubaMontes.Domain
         public char Naipe { get; private set; }
         public int Numero { get; private set; }
 
-        public Carta() { }
-
         public Carta(int numero, char naipe)
         {
             Numero = numero;
