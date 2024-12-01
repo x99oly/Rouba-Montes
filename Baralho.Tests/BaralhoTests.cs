@@ -28,14 +28,14 @@ namespace RoubaMontes.Tests
         {
             // Arrange
             Baralho baralho = new Baralho(2);
-            int ultimaCartaAntes = baralho.UltimaCarta;
+            int ultimaCartaAntes = baralho.posicaoDaUltimaCarta;
 
             // Act
             var jogadorDaVez = new Jogador("teste");
             baralho.RetirarCarta(jogadorDaVez);
 
             // Assert
-            Assert.NotEqual(baralho.Cartas[ultimaCartaAntes], baralho.Cartas[baralho.UltimaCarta]);
+            Assert.NotEqual(baralho.Cartas[ultimaCartaAntes], baralho.Cartas[baralho.posicaoDaUltimaCarta]);
         }
 
         [Fact]
