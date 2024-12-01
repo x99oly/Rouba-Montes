@@ -80,9 +80,12 @@ namespace RoubaMontes.Tests
             // Act
             string resultado = monte.ToString();
 
+            string carta1 = cartaInicial.ToString();
+            int total = 1;
+            string mustBe = $"Total de cartas: {total} - Última carta: {carta1}";
+
             // Assert
-            Assert.Contains("Total de cartas: 1", resultado);
-            Assert.Contains("Última carta: 1♥", resultado);
+            Assert.Contains(mustBe, resultado);
         }
 
         [Fact]

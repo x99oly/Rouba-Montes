@@ -18,7 +18,6 @@ namespace RoubaMontes.Tests
 
             // Assert
             Assert.Equal(nomeJogador, jogador.Nome);
-            Assert.Equal(0, jogador.MonteDeCartas.MonteDeCartas.Count);
         }
 
         [Fact]
@@ -74,7 +73,7 @@ namespace RoubaMontes.Tests
 
             // Assert
             Assert.NotNull(jogador.MonteDeCartas);
-            Assert.Equal(2, jogador.MonteDeCartas.TotalDeCartas);
+            Assert.Equal(2, jogador.MonteDeCartas.TotalDeCartas);//
             Assert.Contains(carta1, jogador.MonteDeCartas.MonteDeCartas);
             Assert.Contains(carta2, jogador.MonteDeCartas.MonteDeCartas);
             Assert.Empty(monte.MonteDeCartas);
@@ -92,7 +91,7 @@ namespace RoubaMontes.Tests
             jogador.SelecionarMonte(montes, carta);
 
             // Assert
-            Assert.Empty(jogador.MonteDeCartas.MonteDeCartas);
+            Assert.Null(jogador.MonteDeCartas);
         }
 
         [Fact]

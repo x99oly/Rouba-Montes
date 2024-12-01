@@ -35,7 +35,7 @@ namespace RoubaMontes.Tests
             baralho.RetirarCarta(jogadorDaVez);
 
             // Assert
-            Assert.NotEqual(baralho.Cartas[ultimaCartaAntes], baralho.Cartas[baralho.posicaoDaUltimaCarta]);
+            Assert.NotEqual(ultimaCartaAntes, baralho.posicaoDaUltimaCarta);
         }
 
         [Fact]

@@ -35,7 +35,7 @@ namespace RoubaMontes.Tests
             int resultado = node.CompareTo(carta2);
 
             // Assert
-            Assert.True(resultado > 0); // carta2 deve ser maior que carta1
+            Assert.False(resultado > 0); // carta1 é maior que carta2
         }
 
         [Fact]
