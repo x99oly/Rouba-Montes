@@ -2,7 +2,7 @@
 
 namespace RoubaMontes.Domain
 {
-    public class Carta
+    public class Carta : IComparable<Carta>
     {
         public char Naipe { get; private set; }
         public int Numero { get; private set; }
@@ -40,6 +40,17 @@ namespace RoubaMontes.Domain
             if (other == null) return false;
 
             return Numero == other.Numero;
+        }
+
+        public int CompareTo(Carta? other)
+        {
+            if (other == null) return 1;
+
+            var carta = other as Carta;
+
+            if (carta == null) return 1;
+
+            return Comparer<int>.Default.Compare(carta.Numero, this.Numero);
         }
     } 
 }

@@ -3,38 +3,55 @@
     public class Jogador
     {
         public string Nome { get; private set; }
-        public Stack<Carta> MonteDeCartas { get; private set; }
+        public Monte MonteDeCartas { get; private set; }
         public int PosicaoNaUltimaPartida { get; private set; }
         public int TamanhoDoMonteNaUltimaPartida { get; private set; }
 
         public Jogador(string nome)
         {
             Nome = nome;
-            MonteDeCartas = new Stack<Carta>();
+            MonteDeCartas = new Monte();
         }
 
         public void ComprarCarta(Carta carta)
         {
-            MonteDeCartas.Push(carta);
-        }
+            if (MonteDeCartas == null) MonteDeCartas = new Monte(carta);
 
-        public void SelecionarMonte(Dictionary<Carta,Monte> montes, Carta carta)
+            else MonteDeCartas.AdicionarCarta(carta);
+        }
+        // Talvez seja melhor trocar o dicionário ----- Tuplas???
+        public bool SelecionarMonte(Dictionary<Carta, Monte> montes, Carta carta)
         {
             if (montes.TryGetValue(carta, out Monte? novoMonte))
             {
                 novoMonte.VincularJogador(this);
-                while(novoMonte.MonteDeCartas.Count > 0)
+                while (novoMonte.MonteDeCartas.Count > 0)
                 {
-                    MonteDeCartas.Push(novoMonte.MonteDeCartas.Pop());
+                    MonteDeCartas.AdicionarMonte(novoMonte);                    
                 }
+                montes.Remove(carta);
+                return true;
             }
+            return false;
         }
 
-        public void PassarVez()
+        public Carta UltimaCarta()
         {
-            throw new NotImplementedException();
+            return MonteDeCartas.UltimaCarta();
         }
 
-        
+        public Carta DescartarUltimaCarta()
+        {
+            return MonteDeCartas.DescartarUltimaCarta();
+        }
+
+        public override string ToString()
+        {
+            if (MonteDeCartas == null)
+                return $"Jogador: {Nome} com total de 0 cartas";
+
+            return $"Jogador: {Nome} com total de {MonteDeCartas.MonteDeCartas.Count()} cartas";
+        }
+
     }
 }

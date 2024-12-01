@@ -18,11 +18,11 @@ namespace RoubaMontes.Tests
 
             // Assert
             Assert.Equal(nomeJogador, jogador.Nome);
-            Assert.Empty(jogador.MonteDeCartas);
+            Assert.Equal(0, jogador.MonteDeCartas.MonteDeCartas.Count);
         }
 
         [Fact]
-        public void Jogador_ComprarCarta_AdicionaCartaAoMonte()
+        public void Jogador_ComprarCarta_CriaMonteSeNaoExistir()
         {
             // Arrange
             Jogador jogador = new Jogador("Jogador1");
@@ -32,8 +32,26 @@ namespace RoubaMontes.Tests
             jogador.ComprarCarta(carta);
 
             // Assert
-            Assert.Single(jogador.MonteDeCartas);
-            Assert.Equal(carta, jogador.MonteDeCartas.Peek());
+            Assert.NotNull(jogador.MonteDeCartas);
+            Assert.Single(jogador.MonteDeCartas.MonteDeCartas);
+            Assert.Equal(carta, jogador.UltimaCarta());
+        }
+
+        [Fact]
+        public void Jogador_ComprarCarta_AdicionaCartaAoMonteExistente()
+        {
+            // Arrange
+            Jogador jogador = new Jogador("Jogador1");
+            jogador.ComprarCarta(new Carta(1, '♥'));
+            Carta novaCarta = new Carta(2, '♦');
+
+            // Act
+            jogador.ComprarCarta(novaCarta);
+
+            // Assert
+            Assert.NotNull(jogador.MonteDeCartas);
+            Assert.Equal(2, jogador.MonteDeCartas.TotalDeCartas);
+            Assert.Equal(novaCarta, jogador.UltimaCarta());
         }
 
         [Fact]
@@ -55,14 +73,15 @@ namespace RoubaMontes.Tests
             jogador.SelecionarMonte(montes, carta1);
 
             // Assert
-            Assert.Equal(2, jogador.MonteDeCartas.Count);
-            Assert.Contains(carta1, jogador.MonteDeCartas);
-            Assert.Contains(carta2, jogador.MonteDeCartas);
+            Assert.NotNull(jogador.MonteDeCartas);
+            Assert.Equal(2, jogador.MonteDeCartas.TotalDeCartas);
+            Assert.Contains(carta1, jogador.MonteDeCartas.MonteDeCartas);
+            Assert.Contains(carta2, jogador.MonteDeCartas.MonteDeCartas);
             Assert.Empty(monte.MonteDeCartas);
         }
 
         [Fact]
-        public void Jogador_SelecionarMonte_NaoAdicionaCartas_SeCartaNaoExiste()
+        public void Jogador_SelecionarMonte_NaoAdicionaCartasSeCartaNaoExiste()
         {
             // Arrange
             Jogador jogador = new Jogador("Jogador1");
@@ -73,11 +92,11 @@ namespace RoubaMontes.Tests
             jogador.SelecionarMonte(montes, carta);
 
             // Assert
-            Assert.Empty(jogador.MonteDeCartas);
+            Assert.Empty(jogador.MonteDeCartas.MonteDeCartas);
         }
 
         [Fact]
-        public void Jogador_ToString_RetornaDescricaoCorreta()
+        public void Jogador_ToString_RetornaDescricaoCorreta_ComMonte()
         {
             // Arrange
             Jogador jogador = new Jogador("Jogador1");
@@ -90,6 +109,20 @@ namespace RoubaMontes.Tests
             // Assert
             Assert.Contains("Jogador: Jogador1", resultado);
             Assert.Contains("2 cartas", resultado);
+        }
+
+        [Fact]
+        public void Jogador_ToString_RetornaDescricaoCorreta_SemMonte()
+        {
+            // Arrange
+            Jogador jogador = new Jogador("Jogador1");
+
+            // Act
+            string resultado = jogador.ToString();
+
+            // Assert
+            Assert.Contains("Jogador: Jogador1", resultado);
+            Assert.Contains("0 cartas", resultado);
         }
     }
 }
