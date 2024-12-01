@@ -1,4 +1,6 @@
-﻿//Copas(Coração): ♥ (\u2665)
-//Ouros(Diamante): ♦ (\u2666)
-//Espadas: ♠ (\u2660)
-//Paus(Trevo): ♣ (\u2663)
+﻿using RoubaMontes.Domain;
+
+Console.WriteLine("Mostrando Baralho: ");
+Baralho baralho = new Baralho(4);
+string string0 = baralho.ToString();
+Console.WriteLine(string0);

@@ -1,16 +1,15 @@
-﻿using RoubaMontes.Domain.Enums;
-using System;
+﻿using System;
 
 namespace RoubaMontes.Domain
 {
     public class Carta
     {
-        public Naipe Naipe { get; private set; }
+        public char Naipe { get; private set; }
         public int Numero { get; private set; }
 
         public Carta() { }
 
-        public Carta(int numero, Naipe naipe)
+        public Carta(int numero, char naipe)
         {
             Numero = numero;
             Naipe = naipe;
@@ -44,5 +43,5 @@ namespace RoubaMontes.Domain
 
             return Numero == other.Numero;
         }
-    }
+    } 
 }
