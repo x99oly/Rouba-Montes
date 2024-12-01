@@ -8,17 +8,12 @@
 
         public int TotalDeCartas { get; private set; }
 
-        public Monte(Carta carta) {
+        public Monte(Carta carta) 
+        {
             TotalDeCartas = 0;
             MonteDeCartas = new Stack<Carta>();
             
             AdicionarCarta(carta);
-        }
-
-        public Monte()
-        {
-            TotalDeCartas = 0;
-            MonteDeCartas = new Stack<Carta>();
         }
 
         public void VincularJogador(Jogador jogador)
@@ -37,12 +32,17 @@
             while(monte.MonteDeCartas.Count > 0)
             {
                 MonteDeCartas.Push(monte.MonteDeCartas.Pop());
+                monte.JogadorDono = null;
             }
             CalcularTotalDeCartas();
         }
         public void CalcularTotalDeCartas()
         {
-            if (MonteDeCartas == null) TotalDeCartas = 0;
+            if (MonteDeCartas == null)
+            {
+                TotalDeCartas = 0;
+                return;
+            }
 
             TotalDeCartas = MonteDeCartas.Count();
         }

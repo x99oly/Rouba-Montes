@@ -12,7 +12,7 @@ namespace RoubaMontes.Domain
 
         public int JogadorDaVez { get; private set; }
 
-        public Carta CartaDaVez { get; private set; }
+        public Carta? CartaDaVez { get; private set; }
 
         public string? Jogada { get; private set; }
 
@@ -28,20 +28,13 @@ namespace RoubaMontes.Domain
             Montes = new Dictionary<Carta, Monte>();
 
             Jogada = "Jogo começou!";
-            NumeroDaRodada = 1;
+            NumeroDaRodada = 0;
 
             SortearPrimeiroAJogar();
         }
 
-        public void DistribuirCartas()
+        public void IniciarRodada()
         {
-            // Selecionar o jogador da vez
-            // Ele saca uma carta
-            // Verifica se há algum monte que tem o mesmo número da carta (incluindo o dele)
-            // Se houver ele come o monte
-            // Se não houver ele descarta a carta criando um novo monte
-            // passa a vez
-
             Jogador jogador = Jogadores[JogadorDaVez];
 
             try
@@ -50,35 +43,41 @@ namespace RoubaMontes.Domain
             }
             catch (ArgumentOutOfRangeException e)
             {
-                Console.WriteLine(e.Message);
-                return;
+                throw new ArgumentOutOfRangeException(e.Message);
             }
+
 
             CartaDaVez = jogador.UltimaCarta();
 
-            if (Montes.Count == 0) return;
-
-            if (Montes.Count > 0 && jogador.SelecionarMonte(Montes, CartaDaVez))
+            if (Montes.Count == 0)
             {
-                Montes.Add(CartaDaVez, jogador.MonteDeCartas);
-                return;
+                Monte monte = new Monte(CartaDaVez);
+                monte.VincularJogador(jogador);
+                Montes.Add(CartaDaVez, monte);
             }
-            else
+            else if (!jogador.SelecionarMonte(Montes, CartaDaVez))
             {
-                // Talvez seja melhor trocar o dicionário ----- Tuplas???
+                Monte novoMonteDeDescarte = new Monte(CartaDaVez);
+                Montes.Add(CartaDaVez, novoMonteDeDescarte);
+                jogador.DescartarUltimaCarta();
 
-                Montes.Add(CartaDaVez, new Monte(CartaDaVez));
-                try
-                {
-                    jogador.DescartarUltimaCarta();
-                }
-                catch (ArgumentOutOfRangeException e)
-                {
-                    Console.WriteLine(e.Message);
-                }
             }
+            {
+                JogadorDaVez = (JogadorDaVez + 1) % Jogadores.Length;
+            }
+            NumeroDaRodada++;
+        }
 
-            JogadorDaVez = (JogadorDaVez + 1) % Jogadores.Length;
+        public override string ToString()
+        {
+            return Log();
+        }
+
+        private string Log()
+        {
+            string carta = CartaDaVez != null ? CartaDaVez.ToString() : "Fim Baralho";
+
+            return $"Rodada: {NumeroDaRodada}, Jogador: {Jogadores[JogadorDaVez].Nome}, carta: {carta}, Baralho com {BaralhoDaPartida.posicaoDaUltimaCarta} cartas.";
         }
 
         private void SortearPrimeiroAJogar()

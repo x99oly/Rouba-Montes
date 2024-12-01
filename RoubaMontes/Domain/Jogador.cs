@@ -3,14 +3,13 @@
     public class Jogador
     {
         public string Nome { get; private set; }
-        public Monte MonteDeCartas { get; private set; }
+        public Monte? MonteDeCartas { get; private set; }
         public int PosicaoNaUltimaPartida { get; private set; }
         public int TamanhoDoMonteNaUltimaPartida { get; private set; }
 
         public Jogador(string nome)
         {
             Nome = nome;
-            MonteDeCartas = new Monte();
         }
 
         public void ComprarCarta(Carta carta)
@@ -20,29 +19,58 @@
             else MonteDeCartas.AdicionarCarta(carta);
         }
         // Talvez seja melhor trocar o dicionário ----- Tuplas???
-        public bool SelecionarMonte(Dictionary<Carta, Monte> montes, Carta carta)
+        public bool SelecionarMonte(Dictionary<Carta, Monte> montes, Carta cartaDaVez)
         {
-            if (montes.TryGetValue(carta, out Monte? novoMonte))
+            if (montes.TryGetValue(cartaDaVez, out Monte? novoMonte))
             {
                 novoMonte.VincularJogador(this);
-                while (novoMonte.MonteDeCartas.Count > 0)
+
+                if (MonteDeCartas == null)
                 {
-                    MonteDeCartas.AdicionarMonte(novoMonte);                    
+                    MonteDeCartas = novoMonte;
                 }
-                montes.Remove(carta);
+                else
+                {
+                    while (novoMonte.MonteDeCartas.Count > 0)
+                    {
+                        MonteDeCartas.AdicionarMonte(novoMonte);
+                    }
+                }
+
+                montes.Remove(cartaDaVez);
+                ComprarCarta(cartaDaVez);
+                montes.Add(UltimaCarta(), MonteDeCartas);
                 return true;
             }
             return false;
         }
 
-        public Carta UltimaCarta()
+        public Carta? UltimaCarta()
         {
-            return MonteDeCartas.UltimaCarta();
+            if (MonteDeCartas == null) return null;
+
+            try
+            {
+                return MonteDeCartas.UltimaCarta();
+            }
+            catch (ArgumentNullException e)
+            {
+                throw new ArgumentNullException(e.Message);
+            }
         }
 
-        public Carta DescartarUltimaCarta()
+        public Carta? DescartarUltimaCarta()
         {
-            return MonteDeCartas.DescartarUltimaCarta();
+            if (MonteDeCartas == null) return null;
+
+            try
+            {
+                return MonteDeCartas.DescartarUltimaCarta();
+            }
+            catch (ArgumentNullException e)
+            {
+                throw new ArgumentNullException(e.Message);
+            }
         }
 
         public override string ToString()

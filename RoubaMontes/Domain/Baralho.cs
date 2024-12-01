@@ -12,7 +12,6 @@ namespace RoubaMontes.Domain
         {
             {1, '♥'}, {2,'♦' },{3,'♠'},{4,'♣'}
         };
-        public int TotalDeCartas { get; private set; }
         public Carta[] Cartas { get; private set; }
 
         private int _quantidadeDeCartasPorJogador = 13;

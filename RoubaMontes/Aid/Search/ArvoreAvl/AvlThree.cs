@@ -1,10 +1,11 @@
 ﻿using System;
+using System.Xml;
 
 namespace RoubaMontes.Aid.Search.ArvoreAvl
 {
     public class AvlThree<T> where T : class, IComparable<T>
     {
-        public Node<T>? Raiz { get; private set; }
+        public Node<T> Raiz { get; private set; }
         public int DirecaoDoBalanceamento { get; private set; } = 1;
 
         public AvlThree(T no)
@@ -38,6 +39,32 @@ namespace RoubaMontes.Aid.Search.ArvoreAvl
             return root;
         }
 
+        public Node<T>? ProcurarNode(T value)
+        {
+            try
+            {
+                return Find(this.Raiz, value);
+            }
+            catch (KeyNotFoundException e)
+            {
+                Console.WriteLine(e.Message);
+                return null;
+            }
+        }
+
+        private Node<T> Find(Node<T>? node, T value)
+        {
+            if(node == null) throw new KeyNotFoundException("Valor não existe na árvore. Retornando nulo...");
+
+            int res = value.CompareTo(node.Raiz);
+
+            if (res == 0) return node;
+
+            if (res == 1) return Find(node.NoDir, value);
+
+            return Find(node.NoEsq, value);
+        }
+
         private void RotacionarEsquerda(Node<T> raiz)
         {
             if (raiz.NoDir == null) return;
@@ -67,7 +94,7 @@ namespace RoubaMontes.Aid.Search.ArvoreAvl
 
         private int Direcao(Node<T> raiz, T novoNo)
         {
-            int res = raiz.CompareTo(novoNo);
+            int res = raiz.CompareTo(novoNo) * -1;
             return res * DirecaoDoBalanceamento;
         }
     }

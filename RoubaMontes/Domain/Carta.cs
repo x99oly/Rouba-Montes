@@ -50,7 +50,9 @@ namespace RoubaMontes.Domain
 
             if (carta == null) return 1;
 
-            return Comparer<int>.Default.Compare(carta.Numero, this.Numero);
+            if (other.Equals(carta)) return 0;
+
+            return carta.Numero > this.Numero ? 1 : -1;
         }
     } 
 }
