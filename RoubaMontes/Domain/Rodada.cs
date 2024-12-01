@@ -39,13 +39,15 @@ namespace RoubaMontes.Domain
 
         public void IniciarRodada()
         {
-            if (JogoEncerrado == true) throw new Exception("Jogo encerrado.");
+            if (JogoEncerrado) throw new Exception("Jogo encerrado.");
 
             Jogador jogador = Jogadores[JogadorDaVez];
 
             try
             {
-                BaralhoDaPartida.RetirarCarta(jogador);
+                RetirarCartaJogador(jogador);
+                CartaDaVez = jogador.UltimaCarta();
+                ProcessarCartaJogador(jogador);
             }
             catch (ArgumentNullException e)
             {
@@ -53,27 +55,46 @@ namespace RoubaMontes.Domain
                 throw new ArgumentNullException(e.Message);
             }
 
+            AtualizarEstadoDaRodada();
+        }
 
-            CartaDaVez = jogador.UltimaCarta();
+        private void RetirarCartaJogador(Jogador jogador)
+        {
+            BaralhoDaPartida.RetirarCarta(jogador);
+        }
 
+        private void ProcessarCartaJogador(Jogador jogador)
+        {
             if (Montes.Count == 0)
             {
-                Monte monte = new Monte(CartaDaVez);
-                monte.VincularJogador(jogador);
-                Montes.Add(CartaDaVez, monte);
+                CriarNovoMonte(jogador);
             }
             else if (!jogador.SelecionarMonte(Montes, CartaDaVez))
             {
-                Monte novoMonteDeDescarte = new Monte(CartaDaVez);
-                Montes.Add(CartaDaVez, novoMonteDeDescarte);
-                jogador.DescartarUltimaCarta();
+                CriarMonteDeDescarte(jogador);
+            }
+        }
 
-            }
-            {
-                JogadorDaVez = (JogadorDaVez + 1) % Jogadores.Length;
-            }
+        private void CriarNovoMonte(Jogador jogador)
+        {
+            Monte monte = new Monte(CartaDaVez);
+            monte.VincularJogador(jogador);
+            Montes.Add(CartaDaVez, monte);
+        }
+
+        private void CriarMonteDeDescarte(Jogador jogador)
+        {
+            Monte novoMonteDeDescarte = new Monte(CartaDaVez);
+            Montes.Add(CartaDaVez, novoMonteDeDescarte);
+            jogador.DescartarUltimaCarta();
+        }
+
+        private void AtualizarEstadoDaRodada()
+        {
+            JogadorDaVez = (JogadorDaVez + 1) % Jogadores.Length;
             NumeroDaRodada++;
         }
+
 
         public override string ToString()
         {
