@@ -13,14 +13,13 @@ namespace RoubaMontes.Domain
             {1, '♥'}, {2,'♦' },{3,'♠'},{4,'♣'}
         };
         public int TotalDeCartas { get; private set; }
-
         public Carta[] Cartas { get; private set; }
 
         private int _quantidadeDeCartasPorJogador = 13;
 
         private Random _cartaEscolhida;
 
-        private int _ultimaCarta;
+        public int UltimaCarta { get; private set; }
 
 
         /// <summary>
@@ -43,7 +42,7 @@ namespace RoubaMontes.Domain
             if (totalDeCartas < 52) totalDeCartas = 52;
 
             Cartas = new Carta[totalDeCartas];
-            _ultimaCarta = Cartas.Length - 1;
+            UltimaCarta = Cartas.Length - 1;
 
             InstancirBaralho(totalDeCartas);
             Embaralhar();
@@ -51,10 +50,10 @@ namespace RoubaMontes.Domain
 
         public void RetirarCarta(Jogador jogadorDaVez)
         {
-            if (_ultimaCarta == 0) throw new ArgumentOutOfRangeException("Não há mais cartas para serem compradas no baralho.");
+            if (UltimaCarta == 0) throw new ArgumentOutOfRangeException("Não há mais cartas para serem compradas no baralho.");
 
-            jogadorDaVez.ComprarCarta(Cartas[_ultimaCarta]);
-            _ultimaCarta--;
+            jogadorDaVez.ComprarCarta(Cartas[UltimaCarta]);
+            UltimaCarta--;
         }
 
         private void InstancirBaralho(int totalDeCartas)
@@ -64,7 +63,7 @@ namespace RoubaMontes.Domain
 
             for (int i = 0; i < totalDeCartas; i++)
             {
-                if (Naipes.TryGetValue(indexDoNaipe, out char charDoNaipe)) // usa o indexDoNaipe para achar o naipe
+                if (Naipes.TryGetValue(indexDoNaipe, out char charDoNaipe))
                 {
                     Cartas[i] = new Carta(numeroDaCarta, charDoNaipe);
                     indexDoNaipe++;

@@ -7,7 +7,9 @@
         public int PosicaoNaUltimaPartida { get; private set; }
         public int TamanhoDoMonteNaUltimaPartida { get; private set; }
 
-        public Jogador() { }
+        public Jogador() {
+            Monte = new Queue<Carta>();
+        }
 
         public Jogador(string nome)
         {
