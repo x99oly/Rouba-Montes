@@ -24,6 +24,7 @@ namespace RoubaMontes
 
             rodada = new Rodada(jogadores);
 
+            Console.WriteLine(rodada.BaralhoDaPartida.ToString());
             do
             {
                 try

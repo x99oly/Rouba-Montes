@@ -54,7 +54,7 @@ namespace RoubaMontes.Domain
         /// <exception cref="ArgumentOutOfRangeException">Em caso de não haver mais cartas no baralho</exception>
         public void RetirarCarta(Jogador jogadorDaVez)
         {
-            if (posicaoDaUltimaCarta == 0) throw new ArgumentOutOfRangeException("Não há mais cartas para serem compradas no baralho.");
+            if (posicaoDaUltimaCarta == 0) throw new ArgumentNullException("Não há mais cartas para serem compradas no baralho.");
 
             jogadorDaVez.ComprarCarta(Cartas[posicaoDaUltimaCarta]);
             posicaoDaUltimaCarta--;
@@ -105,7 +105,7 @@ namespace RoubaMontes.Domain
         {
             Carta temp = Cartas[indice1];
             Cartas[indice1] = Cartas[indice2];
-            Cartas[2] = temp;
+            Cartas[indice2] = temp;
         }
 
         public override string ToString()
@@ -121,7 +121,7 @@ namespace RoubaMontes.Domain
             foreach (var carta in Cartas)
             {
                 if (contador % 13 == 0 && contador != 0) sb.Append("\n");
-                sb.Append($"{carta}, ");
+                sb.Append($"{carta.ToString()}, ");
                 contador++;
             }
 

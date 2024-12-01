@@ -8,11 +8,13 @@
 
         public int TotalDeCartas { get; private set; }
 
-        public Monte(Carta carta) 
-        {
+        public Monte() {
             TotalDeCartas = 0;
             MonteDeCartas = new Stack<Carta>();
-            
+        }
+
+        public Monte(Carta carta) : this()
+        {                         
             AdicionarCarta(carta);
         }
 
@@ -29,11 +31,14 @@
 
         public void AdicionarMonte(Monte monte)
         {
-            while(monte.MonteDeCartas.Count > 0)
+            Carta cartaDaVez = monte.MonteDeCartas.Pop();
+
+            while(monte.MonteDeCartas != null && monte.MonteDeCartas.Count > 0)
             {
                 MonteDeCartas.Push(monte.MonteDeCartas.Pop());
                 monte.JogadorDono = null;
             }
+            AdicionarCarta(cartaDaVez);
             CalcularTotalDeCartas();
         }
         public void CalcularTotalDeCartas()
@@ -50,7 +55,7 @@
         public Carta UltimaCarta()
         {
             if (MonteDeCartas == null || MonteDeCartas.Count == 0)
-                throw new ArgumentNullException("Não há mais cartas no monte do jogador.");
+                throw new InvalidOperationException("Não há mais cartas no monte do jogador.");
 
             return MonteDeCartas.Peek();
         }

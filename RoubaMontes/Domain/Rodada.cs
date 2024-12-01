@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RoubaMontes.Domain
 {
-    internal class Rodada
+    public class Rodada
     {
         public int NumeroDaRodada { get; private set; }
 
@@ -15,6 +15,8 @@ namespace RoubaMontes.Domain
         public Carta? CartaDaVez { get; private set; }
 
         public string? Jogada { get; private set; }
+
+        public bool JogoEncerrado {  get; private set; }
 
         public Dictionary<Carta, Monte> Montes { get; private set; }
         public Jogador[] Jogadores { get; private set; }
@@ -27,6 +29,8 @@ namespace RoubaMontes.Domain
             BaralhoDaPartida = new Baralho(jogadores.Length);
             Montes = new Dictionary<Carta, Monte>();
 
+            JogoEncerrado = false;
+
             Jogada = "Jogo começou!";
             NumeroDaRodada = 0;
 
@@ -35,15 +39,18 @@ namespace RoubaMontes.Domain
 
         public void IniciarRodada()
         {
+            if (JogoEncerrado == true) throw new Exception("Jogo encerrado.");
+
             Jogador jogador = Jogadores[JogadorDaVez];
 
             try
             {
                 BaralhoDaPartida.RetirarCarta(jogador);
             }
-            catch (ArgumentOutOfRangeException e)
+            catch (ArgumentNullException e)
             {
-                throw new ArgumentOutOfRangeException(e.Message);
+                JogoEncerrado = true;
+                throw new ArgumentNullException(e.Message);
             }
 
 

@@ -27,18 +27,16 @@
 
                 if (MonteDeCartas == null)
                 {
-                    MonteDeCartas = novoMonte;
-                }
-                else
-                {
-                    while (novoMonte.MonteDeCartas.Count > 0)
-                    {
-                        MonteDeCartas.AdicionarMonte(novoMonte);
-                    }
+                    MonteDeCartas = new Monte();
                 }
 
+                while (novoMonte.MonteDeCartas.Count > 0)
+                {
+                    MonteDeCartas.AdicionarMonte(novoMonte);
+                }
+
+
                 montes.Remove(cartaDaVez);
-                ComprarCarta(cartaDaVez);
                 montes.Add(UltimaCarta(), MonteDeCartas);
                 return true;
             }
@@ -55,7 +53,7 @@
             }
             catch (ArgumentNullException e)
             {
-                throw new ArgumentNullException(e.Message);
+                throw new InvalidOperationException(e.Message);
             }
         }
 
