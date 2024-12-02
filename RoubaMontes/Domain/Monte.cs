@@ -29,11 +29,15 @@
             CalcularTotalDeCartas();
         }
 
+        /// <summary>
+        /// Garante que a última carta (Carta da vez) seja a que ficará no topo do monte após consumir o outro
+        /// </summary>
+        /// <param name="monte"></param>
         public void AdicionarMonte(Monte monte)
         {
             Carta cartaDaVez = monte.MonteDeCartas.Pop();
 
-            while(monte.MonteDeCartas != null && monte.MonteDeCartas.Count > 0)
+            while(monte.MonteDeCartas.Count > 0)
             {
                 MonteDeCartas.Push(monte.MonteDeCartas.Pop());
                 monte.JogadorDono = null;
@@ -41,6 +45,7 @@
             AdicionarCarta(cartaDaVez);
             CalcularTotalDeCartas();
         }
+
         public void CalcularTotalDeCartas()
         {
             if (MonteDeCartas == null)

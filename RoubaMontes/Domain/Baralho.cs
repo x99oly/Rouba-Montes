@@ -14,7 +14,7 @@ namespace RoubaMontes.Domain
         };
         public Carta[] Cartas { get; private set; }
 
-        private int _quantidadeDeCartasPorJogador = 13;
+        public int _quantidadeDeCartasPorJogador { get; private set; } = 13;
 
         private Random _cartaEscolhida;
 
@@ -52,12 +52,13 @@ namespace RoubaMontes.Domain
         /// </summary>
         /// <param name="jogadorDaVez">Jogador que tem a vez na rodada</param>
         /// <exception cref="ArgumentOutOfRangeException">Em caso de não haver mais cartas no baralho</exception>
-        public void RetirarCarta(Jogador jogadorDaVez)
+        public Carta RetirarCarta()
         {
             if (posicaoDaUltimaCarta == 0) throw new ArgumentNullException("Não há mais cartas para serem compradas no baralho.");
 
-            jogadorDaVez.ComprarCarta(Cartas[posicaoDaUltimaCarta]);
+            Carta ultimaCarta = Cartas[posicaoDaUltimaCarta];
             posicaoDaUltimaCarta--;
+            return ultimaCarta;
         }
 
         private void InstancirBaralho(int totalDeCartas)
