@@ -41,7 +41,7 @@ namespace RoubaMontes
                     catch (Exception ex)
                     {
                         Console.WriteLine(rodada.ToString());
-                        Console.WriteLine(ex.ToString());
+                        Console.WriteLine(ex.Message+"\n");
                     }
                 }
                 while (rodada.JogoEncerrado == false);
