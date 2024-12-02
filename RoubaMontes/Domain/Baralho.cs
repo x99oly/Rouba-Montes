@@ -20,38 +20,23 @@ namespace RoubaMontes.Domain
 
         public int posicaoDaUltimaCarta { get; private set; }
 
-
-        /// <summary>
-        /// Cria uma instância da classe baralho contendo a quantidade de cartas do baralho relativa a cada jogador
-        /// O mínimo de cartas geradas será 52.
-        /// Para valores menores que 2 será gerada instância com 2 jogadores.
-        /// </summary>
-        /// <param name="totalDeJogadores">A quantidade de jogadores da partida - min 2</param>
-        /// <return>Retorna uma instância de Baralho com no mínimo 2 jogadores</return>
-        public Baralho(int totalDeJogadores)
+        public Baralho(int total)
         {
             _cartaEscolhida = new Random();
             int totalDeCartas;
-            if (totalDeJogadores < 2)
-            {
-                totalDeJogadores = 2;
-            }
-            totalDeCartas = totalDeJogadores * _quantidadeDeCartasPorJogador;
 
-            if (totalDeCartas < 52) totalDeCartas = 52;
+            totalDeCartas = total;
+
+            if (total <= 0 || total > 1000) totalDeCartas = 52;
 
             Cartas = new Carta[totalDeCartas];
+
             posicaoDaUltimaCarta = Cartas.Length - 1;
 
             InstancirBaralho(totalDeCartas);
             Embaralhar();
         }
 
-        /// <summary>
-        /// Retira lógicamente o último índice do baralho e entrega ao jogador.
-        /// </summary>
-        /// <param name="jogadorDaVez">Jogador que tem a vez na rodada</param>
-        /// <exception cref="ArgumentOutOfRangeException">Em caso de não haver mais cartas no baralho</exception>
         public Carta RetirarCarta()
         {
             if (posicaoDaUltimaCarta == 0) throw new ArgumentNullException("Não há mais cartas para serem compradas no baralho.");
@@ -85,12 +70,6 @@ namespace RoubaMontes.Domain
             Fisher_YatesShuffle(ultima);
         }
 
-        /// <summary>
-        /// Ordena de forma aleatória
-        /// Usa o último índice lógico e troca com um aleatório, então decrementa o último.
-        /// Como para na metade não garante total aleatóriedade, mas como o índice trocado com último é aleatório também garante que todo jogo seja diferente.
-        /// </summary>
-        /// <param name="ultima">O índice a ser trocado - Iniciamente Length - 1</param>
         private void Fisher_YatesShuffle(int ultima)
         {
             if (ultima == Cartas.Length / 2) return;

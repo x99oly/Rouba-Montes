@@ -28,8 +28,8 @@ namespace RoubaMontes.Domain
 
         public Rodada(Jogador[] jogadores, Baralho baralho)
         {
-            if(!ValidarIntanciaDoBaralho(jogadores, baralho))
-                throw new InvalidOperationException("Baralho não tem a quantidade correta de cartas dado o número de jogadores.");
+            //if(!ValidarIntanciaDoBaralho(jogadores, baralho))
+            //    throw new InvalidOperationException("Baralho não tem a quantidade correta de cartas dado o número de jogadores.");
 
             Jogadores = jogadores;
             BaralhoDaPartida = baralho;

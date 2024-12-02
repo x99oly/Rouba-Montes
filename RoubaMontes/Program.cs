@@ -15,21 +15,26 @@ namespace RoubaMontes
                 Jogador[] jogadores;
                 Baralho baralho;
                 Rodada rodada;
-                Console.Write($"Digite o número de jogadores(Min de 2): ");
 
+                Console.Write($"Digite o número de jogadores(Min de 2): ");
                 if (!int.TryParse(Console.ReadLine(), out int numJogadores) || numJogadores < 2)
                 {
                     numJogadores = 2;
                 }
 
-                jogadores = new Jogador[numJogadores];
+                Console.Write($"Digite o número de cartas (52/1000) *Pra valores inválidos - Default 52: ");
+                if (!int.TryParse(Console.ReadLine(), out int numCartas) || numCartas < numJogadores)
+                {
+                    numCartas = 52;
+                }
 
+                jogadores = new Jogador[numJogadores];
                 for (int i = 0; i < jogadores.Length; i++)
                 {
                     jogadores[i] = new Jogador($"jogador {i}");
                 }
 
-                baralho = new Baralho(jogadores.Length);
+                baralho = new Baralho(numCartas);
                 rodada = new Rodada(jogadores, baralho);
 
                 do
