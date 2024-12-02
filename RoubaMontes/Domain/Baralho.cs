@@ -12,14 +12,13 @@ namespace RoubaMontes.Domain
         {
             {1, '♥'}, {2,'♦' },{3,'♠'},{4,'♣'}
         };
-        public int TotalDeCartas { get; private set; }
         public Carta[] Cartas { get; private set; }
 
-        private int _quantidadeDeCartasPorJogador = 13;
+        public int _quantidadeDeCartasPorJogador { get; private set; } = 13;
 
         private Random _cartaEscolhida;
 
-        public int UltimaCarta { get; private set; }
+        public int posicaoDaUltimaCarta { get; private set; }
 
 
         /// <summary>
@@ -42,18 +41,24 @@ namespace RoubaMontes.Domain
             if (totalDeCartas < 52) totalDeCartas = 52;
 
             Cartas = new Carta[totalDeCartas];
-            UltimaCarta = Cartas.Length - 1;
+            posicaoDaUltimaCarta = Cartas.Length - 1;
 
             InstancirBaralho(totalDeCartas);
             Embaralhar();
         }
 
-        public void RetirarCarta(Jogador jogadorDaVez)
+        /// <summary>
+        /// Retira lógicamente o último índice do baralho e entrega ao jogador.
+        /// </summary>
+        /// <param name="jogadorDaVez">Jogador que tem a vez na rodada</param>
+        /// <exception cref="ArgumentOutOfRangeException">Em caso de não haver mais cartas no baralho</exception>
+        public Carta RetirarCarta()
         {
-            if (UltimaCarta == 0) throw new ArgumentOutOfRangeException("Não há mais cartas para serem compradas no baralho.");
+            if (posicaoDaUltimaCarta == 0) throw new ArgumentNullException("Não há mais cartas para serem compradas no baralho.");
 
-            jogadorDaVez.ComprarCarta(Cartas[UltimaCarta]);
-            UltimaCarta--;
+            Carta ultimaCarta = Cartas[posicaoDaUltimaCarta];
+            posicaoDaUltimaCarta--;
+            return ultimaCarta;
         }
 
         private void InstancirBaralho(int totalDeCartas)
@@ -101,7 +106,7 @@ namespace RoubaMontes.Domain
         {
             Carta temp = Cartas[indice1];
             Cartas[indice1] = Cartas[indice2];
-            Cartas[2] = temp;
+            Cartas[indice2] = temp;
         }
 
         public override string ToString()
@@ -117,7 +122,7 @@ namespace RoubaMontes.Domain
             foreach (var carta in Cartas)
             {
                 if (contador % 13 == 0 && contador != 0) sb.Append("\n");
-                sb.Append($"{carta}, ");
+                sb.Append($"{carta.ToString()}, ");
                 contador++;
             }
 

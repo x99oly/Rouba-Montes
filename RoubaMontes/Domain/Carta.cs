@@ -2,12 +2,10 @@
 
 namespace RoubaMontes.Domain
 {
-    public class Carta
+    public class Carta : IComparable<Carta>
     {
         public char Naipe { get; private set; }
         public int Numero { get; private set; }
-
-        public Carta() { }
 
         public Carta(int numero, char naipe)
         {
@@ -17,7 +15,7 @@ namespace RoubaMontes.Domain
 
         public override string ToString()
         {
-            return $"{Numero}{Naipe}";
+            return $"{Numero:D2}{Naipe}";
         }
 
         public override int GetHashCode()
@@ -25,14 +23,6 @@ namespace RoubaMontes.Domain
             return Numero.GetHashCode();
         }
 
-        /// <summary>
-        /// Verifica se duas cartas são iguais com base em seu número 
-        /// ** Naipe ignorado segundo regras do jogo **
-        /// </summary>
-        /// <param name="obj"></param>
-        /// <returns>True se Numero for igual</returns>
-        /// <returns>False se entidade for nula</returns>
-        /// <returns>False se a própria instância da classe for nula</returns>
         public override bool Equals(object? obj)
         {
             if (this == null) return false;
@@ -42,6 +32,19 @@ namespace RoubaMontes.Domain
             if (other == null) return false;
 
             return Numero == other.Numero;
+        }
+
+        public int CompareTo(Carta? other)
+        {
+            if (other == null) return 1;
+
+            var carta = other as Carta;
+
+            if (carta == null) return 1;
+
+            if (other.Equals(carta)) return 0;
+
+            return carta.Numero > this.Numero ? 1 : -1;
         }
     } 
 }
