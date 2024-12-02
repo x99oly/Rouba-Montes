@@ -1,4 +1,5 @@
 ﻿using RoubaMontes.Domain;
+using RoubaMontes.Aid;
 using System.Text;
 
 namespace RoubaMontes
@@ -31,7 +32,6 @@ namespace RoubaMontes
                 baralho = new Baralho(jogadores.Length);
                 rodada = new Rodada(jogadores, baralho);
 
-                Console.WriteLine(rodada.BaralhoDaPartida.ToString() + "\n");
                 do
                 {
                     try
@@ -47,6 +47,8 @@ namespace RoubaMontes
                 while (rodada.JogoEncerrado == false);
 
                 Console.WriteLine(VencedoresString(rodada));
+
+                Arquivos.SalvarLogs(rodada.Log.ToString());
 
                 Console.WriteLine($"\nGostaria de rodar outra partida (S)sim ou (Any key)não?");
                 if (Console.ReadLine().ToLower() != "s") break;

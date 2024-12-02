@@ -1,0 +1,103 @@
+Rodada: 1, Jogador: 0, carta da vez: 11♦, maiores montes Jogador: jogador 0 com total de 2 cartas - ,  baralho tem 102 cartas.
+Rodada: 2, Jogador: 1, carta da vez: 09♥, maiores montes Jogador: jogador 0 com total de 2 cartas - ,  baralho tem 101 cartas.
+Rodada: 3, Jogador: 2, carta da vez: 12♣, maiores montes Jogador: jogador 0 com total de 2 cartas - ,  baralho tem 100 cartas.
+Rodada: 4, Jogador: 3, carta da vez: 05♥, maiores montes Jogador: jogador 0 com total de 2 cartas - ,  baralho tem 99 cartas.
+Rodada: 5, Jogador: 3, carta da vez: 09♣, maiores montes Jogador: jogador 0 com total de 2 cartas - ,  baralho tem 98 cartas.
+Rodada: 6, Jogador: 4, carta da vez: 08♣, maiores montes Jogador: jogador 0 com total de 2 cartas - ,  baralho tem 97 cartas.
+Rodada: 7, Jogador: 5, carta da vez: 04♠, maiores montes Jogador: jogador 0 com total de 2 cartas - ,  baralho tem 96 cartas.
+Rodada: 8, Jogador: 5, carta da vez: 08♥, maiores montes Jogador: jogador 0 com total de 2 cartas - ,  baralho tem 95 cartas.
+Rodada: 9, Jogador: 6, carta da vez: 06♥, maiores montes Jogador: jogador 0 com total de 2 cartas - ,  baralho tem 94 cartas.
+Rodada: 10, Jogador: 7, carta da vez: 13♥, maiores montes Jogador: jogador 0 com total de 2 cartas - ,  baralho tem 93 cartas.
+Rodada: 11, Jogador: 0, carta da vez: 01♥, maiores montes Jogador: jogador 0 com total de 2 cartas - ,  baralho tem 92 cartas.
+Rodada: 12, Jogador: 0, carta da vez: 06♥, maiores montes Jogador: jogador 0 com total de 3 cartas - ,  baralho tem 91 cartas.
+Rodada: 13, Jogador: 0, carta da vez: 08♣, maiores montes Jogador: jogador 0 com total de 4 cartas - ,  baralho tem 90 cartas.
+Rodada: 14, Jogador: 1, carta da vez: 10♠, maiores montes Jogador: jogador 0 com total de 4 cartas - ,  baralho tem 89 cartas.
+Rodada: 15, Jogador: 1, carta da vez: 01♣, maiores montes Jogador: jogador 0 com total de 4 cartas - ,  baralho tem 88 cartas.
+Rodada: 16, Jogador: 1, carta da vez: 04♥, maiores montes Jogador: jogador 0 com total de 4 cartas - ,  baralho tem 87 cartas.
+Rodada: 17, Jogador: 2, carta da vez: 07♦, maiores montes Jogador: jogador 0 com total de 4 cartas - ,  baralho tem 86 cartas.
+Rodada: 18, Jogador: 2, carta da vez: 12♦, maiores montes Jogador: jogador 0 com total de 4 cartas - ,  baralho tem 85 cartas.
+Rodada: 19, Jogador: 3, carta da vez: 03♠, maiores montes Jogador: jogador 0 com total de 4 cartas - ,  baralho tem 84 cartas.
+Rodada: 20, Jogador: 3, carta da vez: 01♥, maiores montes Jogador: jogador 0 com total de 4 cartas - ,  baralho tem 83 cartas.
+Rodada: 21, Jogador: 3, carta da vez: 06♦, maiores montes Jogador: jogador 0 com total de 4 cartas - ,  baralho tem 82 cartas.
+Rodada: 22, Jogador: 3, carta da vez: 13♥, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 4 cartas - ,  baralho tem 81 cartas.
+Rodada: 23, Jogador: 3, carta da vez: 01♦, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 5 cartas - ,  baralho tem 80 cartas.
+Rodada: 24, Jogador: 3, carta da vez: 12♥, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 6 cartas - ,  baralho tem 79 cartas.
+Rodada: 25, Jogador: 3, carta da vez: 01♦, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 7 cartas - ,  baralho tem 78 cartas.
+Rodada: 26, Jogador: 3, carta da vez: 04♥, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 8 cartas - ,  baralho tem 77 cartas.
+Rodada: 27, Jogador: 3, carta da vez: 10♥, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - ,  baralho tem 76 cartas.
+Rodada: 28, Jogador: 4, carta da vez: 02♠, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - ,  baralho tem 75 cartas.
+Rodada: 29, Jogador: 4, carta da vez: 11♥, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - ,  baralho tem 74 cartas.
+Rodada: 30, Jogador: 4, carta da vez: 04♣, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - ,  baralho tem 73 cartas.
+Rodada: 31, Jogador: 4, carta da vez: 04♦, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - ,  baralho tem 72 cartas.
+Rodada: 32, Jogador: 4, carta da vez: 11♦, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - ,  baralho tem 71 cartas.
+Rodada: 33, Jogador: 4, carta da vez: 13♠, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - ,  baralho tem 70 cartas.
+Rodada: 34, Jogador: 4, carta da vez: 05♦, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - ,  baralho tem 69 cartas.
+Rodada: 35, Jogador: 4, carta da vez: 02♣, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - ,  baralho tem 68 cartas.
+Rodada: 36, Jogador: 4, carta da vez: 10♦, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - ,  baralho tem 67 cartas.
+Rodada: 37, Jogador: 4, carta da vez: 13♣, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - Jogador: jogador 4 com total de 9 cartas - ,  baralho tem 66 cartas.
+Rodada: 38, Jogador: 4, carta da vez: 07♣, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - Jogador: jogador 4 com total de 10 cartas - ,  baralho tem 65 cartas.
+Rodada: 39, Jogador: 4, carta da vez: 13♦, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - Jogador: jogador 4 com total de 11 cartas - ,  baralho tem 64 cartas.
+Rodada: 40, Jogador: 4, carta da vez: 02♠, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - Jogador: jogador 4 com total de 12 cartas - ,  baralho tem 63 cartas.
+Rodada: 41, Jogador: 4, carta da vez: 10♦, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - Jogador: jogador 4 com total de 13 cartas - ,  baralho tem 62 cartas.
+Rodada: 42, Jogador: 4, carta da vez: 09♦, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - Jogador: jogador 4 com total de 14 cartas - ,  baralho tem 61 cartas.
+Rodada: 43, Jogador: 4, carta da vez: 08♦, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - Jogador: jogador 4 com total de 15 cartas - ,  baralho tem 60 cartas.
+Rodada: 44, Jogador: 4, carta da vez: 02♣, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - Jogador: jogador 4 com total de 16 cartas - ,  baralho tem 59 cartas.
+Rodada: 45, Jogador: 4, carta da vez: 02♥, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - Jogador: jogador 4 com total de 17 cartas - ,  baralho tem 58 cartas.
+Rodada: 46, Jogador: 4, carta da vez: 13♠, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - Jogador: jogador 4 com total de 18 cartas - ,  baralho tem 57 cartas.
+Rodada: 47, Jogador: 4, carta da vez: 10♣, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - Jogador: jogador 4 com total de 19 cartas - ,  baralho tem 56 cartas.
+Rodada: 48, Jogador: 4, carta da vez: 05♠, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - Jogador: jogador 4 com total de 20 cartas - ,  baralho tem 55 cartas.
+Rodada: 49, Jogador: 4, carta da vez: 08♥, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - Jogador: jogador 4 com total de 21 cartas - ,  baralho tem 54 cartas.
+Rodada: 50, Jogador: 4, carta da vez: 08♦, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - Jogador: jogador 4 com total de 22 cartas - ,  baralho tem 53 cartas.
+Rodada: 51, Jogador: 4, carta da vez: 02♦, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - Jogador: jogador 4 com total de 23 cartas - ,  baralho tem 52 cartas.
+Rodada: 52, Jogador: 4, carta da vez: 07♥, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - Jogador: jogador 4 com total de 24 cartas - ,  baralho tem 51 cartas.
+Rodada: 53, Jogador: 4, carta da vez: 13♣, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - Jogador: jogador 4 com total de 25 cartas - ,  baralho tem 50 cartas.
+Rodada: 54, Jogador: 4, carta da vez: 12♠, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - Jogador: jogador 4 com total de 26 cartas - ,  baralho tem 49 cartas.
+Rodada: 55, Jogador: 4, carta da vez: 04♣, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - Jogador: jogador 4 com total de 27 cartas - ,  baralho tem 48 cartas.
+Rodada: 56, Jogador: 4, carta da vez: 10♥, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - Jogador: jogador 4 com total de 28 cartas - ,  baralho tem 47 cartas.
+Rodada: 57, Jogador: 4, carta da vez: 09♣, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - Jogador: jogador 4 com total de 29 cartas - ,  baralho tem 46 cartas.
+Rodada: 58, Jogador: 4, carta da vez: 08♠, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - Jogador: jogador 4 com total de 30 cartas - ,  baralho tem 45 cartas.
+Rodada: 59, Jogador: 4, carta da vez: 06♣, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - Jogador: jogador 4 com total de 31 cartas - ,  baralho tem 44 cartas.
+Rodada: 60, Jogador: 4, carta da vez: 05♣, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - Jogador: jogador 4 com total de 32 cartas - ,  baralho tem 43 cartas.
+Rodada: 61, Jogador: 4, carta da vez: 05♣, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - Jogador: jogador 4 com total de 33 cartas - ,  baralho tem 42 cartas.
+Rodada: 62, Jogador: 4, carta da vez: 07♦, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - Jogador: jogador 4 com total de 34 cartas - ,  baralho tem 41 cartas.
+Rodada: 63, Jogador: 4, carta da vez: 03♦, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - Jogador: jogador 4 com total de 35 cartas - ,  baralho tem 40 cartas.
+Rodada: 64, Jogador: 4, carta da vez: 08♠, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - Jogador: jogador 4 com total de 36 cartas - ,  baralho tem 39 cartas.
+Rodada: 65, Jogador: 4, carta da vez: 09♠, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - Jogador: jogador 4 com total de 37 cartas - ,  baralho tem 38 cartas.
+Rodada: 66, Jogador: 4, carta da vez: 07♣, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - Jogador: jogador 4 com total de 38 cartas - ,  baralho tem 37 cartas.
+Rodada: 67, Jogador: 4, carta da vez: 12♦, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - Jogador: jogador 4 com total de 39 cartas - ,  baralho tem 36 cartas.
+Rodada: 68, Jogador: 4, carta da vez: 11♣, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - Jogador: jogador 4 com total de 40 cartas - ,  baralho tem 35 cartas.
+Rodada: 69, Jogador: 4, carta da vez: 10♣, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - Jogador: jogador 4 com total de 41 cartas - ,  baralho tem 34 cartas.
+Rodada: 70, Jogador: 4, carta da vez: 09♠, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - Jogador: jogador 4 com total de 42 cartas - ,  baralho tem 33 cartas.
+Rodada: 71, Jogador: 4, carta da vez: 01♠, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - Jogador: jogador 4 com total de 43 cartas - ,  baralho tem 32 cartas.
+Rodada: 72, Jogador: 4, carta da vez: 07♥, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - Jogador: jogador 4 com total de 44 cartas - ,  baralho tem 31 cartas.
+Rodada: 73, Jogador: 4, carta da vez: 06♣, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - Jogador: jogador 4 com total de 45 cartas - ,  baralho tem 30 cartas.
+Rodada: 74, Jogador: 4, carta da vez: 05♠, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - Jogador: jogador 4 com total de 46 cartas - ,  baralho tem 29 cartas.
+Rodada: 75, Jogador: 4, carta da vez: 11♠, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - Jogador: jogador 4 com total de 47 cartas - ,  baralho tem 28 cartas.
+Rodada: 76, Jogador: 4, carta da vez: 03♥, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - Jogador: jogador 4 com total de 48 cartas - ,  baralho tem 27 cartas.
+Rodada: 77, Jogador: 4, carta da vez: 06♠, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - Jogador: jogador 4 com total de 49 cartas - ,  baralho tem 26 cartas.
+Rodada: 78, Jogador: 4, carta da vez: 01♠, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - Jogador: jogador 4 com total de 50 cartas - ,  baralho tem 25 cartas.
+Rodada: 79, Jogador: 4, carta da vez: 13♦, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - Jogador: jogador 4 com total de 51 cartas - ,  baralho tem 24 cartas.
+Rodada: 80, Jogador: 4, carta da vez: 12♥, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - Jogador: jogador 4 com total de 52 cartas - ,  baralho tem 23 cartas.
+Rodada: 81, Jogador: 4, carta da vez: 11♣, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - Jogador: jogador 4 com total de 53 cartas - ,  baralho tem 22 cartas.
+Rodada: 82, Jogador: 4, carta da vez: 10♠, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - Jogador: jogador 4 com total de 54 cartas - ,  baralho tem 21 cartas.
+Rodada: 83, Jogador: 4, carta da vez: 09♦, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - Jogador: jogador 4 com total de 55 cartas - ,  baralho tem 20 cartas.
+Rodada: 84, Jogador: 4, carta da vez: 02♥, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - Jogador: jogador 4 com total de 56 cartas - ,  baralho tem 19 cartas.
+Rodada: 85, Jogador: 4, carta da vez: 04♠, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - Jogador: jogador 4 com total de 57 cartas - ,  baralho tem 18 cartas.
+Rodada: 86, Jogador: 4, carta da vez: 06♠, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - Jogador: jogador 4 com total de 58 cartas - ,  baralho tem 17 cartas.
+Rodada: 87, Jogador: 4, carta da vez: 05♦, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - Jogador: jogador 4 com total de 59 cartas - ,  baralho tem 16 cartas.
+Rodada: 88, Jogador: 4, carta da vez: 11♥, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - Jogador: jogador 4 com total de 60 cartas - ,  baralho tem 15 cartas.
+Rodada: 89, Jogador: 4, carta da vez: 03♣, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - Jogador: jogador 4 com total de 61 cartas - ,  baralho tem 14 cartas.
+Rodada: 90, Jogador: 4, carta da vez: 03♥, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - Jogador: jogador 4 com total de 62 cartas - ,  baralho tem 13 cartas.
+Rodada: 91, Jogador: 4, carta da vez: 12♠, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - Jogador: jogador 4 com total de 63 cartas - ,  baralho tem 12 cartas.
+Rodada: 92, Jogador: 4, carta da vez: 04♦, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - Jogador: jogador 4 com total de 64 cartas - ,  baralho tem 11 cartas.
+Rodada: 93, Jogador: 4, carta da vez: 12♣, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - Jogador: jogador 4 com total de 65 cartas - ,  baralho tem 10 cartas.
+Rodada: 94, Jogador: 4, carta da vez: 11♠, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - Jogador: jogador 4 com total de 66 cartas - ,  baralho tem 9 cartas.
+Rodada: 95, Jogador: 4, carta da vez: 03♣, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - Jogador: jogador 4 com total de 67 cartas - ,  baralho tem 8 cartas.
+Rodada: 96, Jogador: 4, carta da vez: 09♥, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - Jogador: jogador 4 com total de 68 cartas - ,  baralho tem 7 cartas.
+Rodada: 97, Jogador: 4, carta da vez: 01♣, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - Jogador: jogador 4 com total de 69 cartas - ,  baralho tem 6 cartas.
+Rodada: 98, Jogador: 4, carta da vez: 07♠, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - Jogador: jogador 4 com total de 70 cartas - ,  baralho tem 5 cartas.
+Rodada: 99, Jogador: 4, carta da vez: 06♦, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - Jogador: jogador 4 com total de 71 cartas - ,  baralho tem 4 cartas.
+Rodada: 100, Jogador: 4, carta da vez: 05♥, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - Jogador: jogador 4 com total de 72 cartas - ,  baralho tem 3 cartas.
+Rodada: 101, Jogador: 4, carta da vez: 07♠, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - Jogador: jogador 4 com total de 73 cartas - ,  baralho tem 2 cartas.
+Rodada: 102, Jogador: 4, carta da vez: 03♠, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - Jogador: jogador 4 com total de 74 cartas - ,  baralho tem 1 cartas.
+Rodada: 103, Jogador: 4, carta da vez: 02♦, maiores montes Jogador: jogador 0 com total de 4 cartas - Jogador: jogador 3 com total de 9 cartas - Jogador: jogador 4 com total de 75 cartas - ,  baralho tem 0 cartas.
