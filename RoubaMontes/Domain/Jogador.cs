@@ -89,7 +89,7 @@
 
             int totalDeCartas = TotalDeCartas();
 
-            return $"Jogador: {Nome} com total de {totalDeCartas} cartas";
+            return $"Jogador: {Nome} - Total de cartas: {totalDeCartas}";
         }
 
     }

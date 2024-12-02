@@ -167,5 +167,18 @@ namespace RoubaMontes.Domain
             Log.Append($"Rodada: {NumeroDaRodada}, Jogador: {jogador}, carta da vez: {carta}, maiores montes {maioresMontes},  baralho tem {BaralhoDaPartida.posicaoDaUltimaCarta} cartas.\n");
         }
 
+        public string LogFinal()
+        {
+            StringBuilder sb = new StringBuilder();
+            
+            foreach (Jogador j in Jogadores)
+            {
+                sb.Append(j.ToString() + " | ");
+            }
+            sb.AppendLine("\n");
+            sb.Append(Log.ToString());
+            return sb.ToString();
+        }
+
     }
 }

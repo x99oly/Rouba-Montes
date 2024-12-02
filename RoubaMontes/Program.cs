@@ -45,7 +45,7 @@ namespace RoubaMontes
                     }
                     catch (Exception ex)
                     {
-                        Console.WriteLine(rodada.ToString());
+                        Console.WriteLine("\n\n" + rodada.LogFinal());
                         Console.WriteLine(ex.Message+"\n");
                     }
                 }
@@ -57,6 +57,7 @@ namespace RoubaMontes
 
                 Console.WriteLine($"\nGostaria de rodar outra partida (S)sim ou (Any key)não?");
                 if (Console.ReadLine().ToLower() != "s") break;
+                else Console.Clear();
             }
             while (true);
 
